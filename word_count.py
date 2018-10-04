@@ -5,8 +5,8 @@ import argparse
 parser = argparse.ArgumentParser( description="" )
 
 parser.add_argument(
-	"arg",
-	help="what does this do?",
+	"data_file",
+	help="path to file we want to read",
 )
 
 #-------------------------------------------------------------------------------
@@ -14,7 +14,8 @@ parser.add_argument(
 #-------------------------------------------------------------------------------
 
 args = parser.parse_args( )
-
+print(args) #shows that it is a namespace
+print(args.data_file) #how we get args file . find the thing inside of it
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
 #-------------------------------------------------------------------------------
