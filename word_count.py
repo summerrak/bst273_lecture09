@@ -14,8 +14,15 @@ parser.add_argument(
 #-------------------------------------------------------------------------------
 
 args = parser.parse_args( )
-print(args) #shows that it is a namespace
+print("args =", args) #shows that it is a namespace
 print(args.data_file) #how we get args file . find the thing inside of it
+
+fh = open(args.data_file) #fh is how we hold on to this file
+print("the file handle is", fh)
+
+lines = 0
+words = 0
+chars = 0
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
 #-------------------------------------------------------------------------------
